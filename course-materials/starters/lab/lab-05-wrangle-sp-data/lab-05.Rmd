@@ -16,24 +16,52 @@ library(dsbox)
 states <- read_csv("data/states.csv")
 ```
 
-### Exercise 1
+### Exercise 1 - Denny's in AK
 
-### Exercise 2
+```{r}
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+dn_ak <- dennys %>% filter(state == "AK")
+nrow(dn_ak)
 
-### Exercise 3
+```
+
+### Exercise 2 - La Quinta in AK
+
+```{r}
+
+lq_ak <- laquinta %>% filter(state == "AK") 
+nrow(lq_ak)
+
+```
+
+### Exercise 3 - Distance between Denny's and La Quinta in AK
+
+```{r}
+
+dn_lq_ak <- full_join(dn_ak, lq_ak, by = "state") 
+
+```
 
 ...
 
 ### Exercise 4
 
+```{r}
+dn_lq_ak
+```
+
+There are 6 observations with 11 variables.
+The 11 variables are address (x & y), city(x & y), zip(x & y), longitude(x & y), latitude(x & y), and state.
+The x in the variable name is the data from the 'x' data frame which is associated with the Denny's, and 'y' is associated with La Quinta
+
 ...
 
 ### Exercise 5
+
+```{r}
+
+
+```
 
 ...
 
