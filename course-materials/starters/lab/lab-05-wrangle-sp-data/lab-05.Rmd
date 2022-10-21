@@ -151,6 +151,7 @@ dn_lq_ca_mindist <- dn_lq_ca %>%
   summarise(closest = min(distance_km))
 dn_lq_ca %>% ggplot(aes(x=address.x, y=distance_km)) + geom_point()
 dn_lq_ca_mindist %>% ggplot(aes(x=address.x, y=closest)) + geom_point()
+dn_lq_ca_mindist %>% filter(closest <= 1)
 ```
 
 ...
