@@ -8,7 +8,7 @@ output: github_document
 ### Load packages and data
 
 ```{r load-packages, message = FALSE}
-library(tidyverse) 
+library(tidyverse)
 library(dsbox) 
 ```
 
@@ -147,7 +147,11 @@ df_laquinta <- df_laquinta %>%
   mutate(establishment = "La Quinta")
 
 dn_lq <- bind_rows(df_dennys, df_laquinta) %>%
+<<<<<<< HEAD
   filter(state == "OK")
+=======
+  filter(state == "NC")
+>>>>>>> c22f7093988991c809b608d62f8275752cde21b0
 
 dn_lq %>% ggplot(mapping = aes(x = longitude, y = latitude, color = establishment)) + geom_point()
 ```
